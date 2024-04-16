@@ -1,0 +1,78 @@
+:root {
+  --fonte: "Lato";
+  --degrade: linear-gradient(45deg, #ccc, #e7e7e7, #ccc);
+  --paleta-1: #0d0d0d;
+  --paleta-2: #f2f2f2;
+  --paleta-3: #7b44f2;
+  --paleta-4: #32088c;
+  --paleta-5: #550cf2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--fonte);
+}
+
+body {
+  background-color: var(--paleta-2);
+}
+
+header nav {
+  background-color: var(--paleta-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vh 1vw;
+}
+
+header nav a {
+  display: flex;
+  color: var(--paleta-2);
+  font-size: 3vw;
+  flex-wrap: nowrap;
+  gap: 1vw;
+}
+
+header nav input {
+  width: 40vw;
+  height: 5vh;
+  padding: 1vw;
+}
+
+header nav div {
+  display: flex;
+  gap: 7vw;
+}
+
+img {
+  object-fit: contain;
+}
+
+button,
+input{
+  outline: none;
+  border: none;
+  font-size: 1.5vw;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header button {
+  color: var(--paleta-2);
+  display: flex;
+  align-items: center;
+}
+
+header a button span,
+header a button span svg {
+  font-size: 3vw;
+  display: flex;
+}
+
+header button span svg {
+  font-size: 2.5vw;
+}
