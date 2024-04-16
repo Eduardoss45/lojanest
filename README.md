@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -81,4 +80,3 @@ Este projeto é distribuído sob a licença MIT. Consulte o arquivo [LICENSE](LI
 ---
 
 Sinta-se à vontade para contribuir, relatar problemas ou enviar solicitações de melhoria. Obrigado por usar e contribuir para este projeto!
->>>>>>> 53d6e3e06589c3554b3af6e68603ca7a233125a9
