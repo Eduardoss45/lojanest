@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "./Button";
-import { Link } from "react-router-dom";
 
 const ProductsCard = ({
   id,
@@ -17,11 +16,7 @@ const ProductsCard = ({
           <img src={thumbnail} alt={title} className="card-image" />
           <p className="description">{description}</p>
           <nav className="card-btn">
-            {showLink && (
-              <Link to={`/product/${id}`}>
-                <Button text="Saiba mais" />
-              </Link>
-            )}
+            {showLink && <Button rote={`/product/${id}`} text="Saiba mais" />}
           </nav>
         </section>
       </article>

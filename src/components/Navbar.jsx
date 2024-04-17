@@ -1,30 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 
 import Button from "./Button";
+import Input from "./Input";
 
 const Navbar = () => {
   return (
     <header>
-      <nav>
-        <div>
-          <Link to="/">
-            <Button text={<AiOutlineShoppingCart />} extra_text="NestShop" />
-          </Link>
-        </div>
-        <div>
-          <input
+      <nav id="user-navigation">
+        <Button
+          rote={`/`}
+          id="logo"
+          icon={<AiOutlineShoppingCart />}
+          text="NestShop"
+        />
+        <div id="search-bar">
+          <Input
             type="text"
-            name="search-products"
             id="search-products"
-            placeholder="Buscar na NestShop"
+            text="Buscar na NestShop"
+            icon={<AiOutlineSearch />}
           />
         </div>
-        <div>
-          <Button text={<AiOutlineShoppingCart />} />
-          <Button text="Cadastrar" />
-          <Button text="Entre" />
+        <Button
+          rote={`/`}
+          class_name="btn btn-svg"
+          icon={<AiOutlineShoppingCart />}
+        />
+        <div id="user-options">
+          <Button rote={`/`} class_name="btn" text="Cadastrar" />
+          <Button rote={`/`} class_name="btn" text="Entre" />
         </div>
       </nav>
     </header>

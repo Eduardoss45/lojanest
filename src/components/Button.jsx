@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Button = ({ text, extra_text }) => {
+const Button = ({ rote, id, class_name, icon, text }) => {
   return (
     <>
-      <button>
-        <span>{text}</span>
-        {extra_text && <span>{extra_text}</span>}
-      </button>
+      <Link to={rote}>
+        <button id={id} className={class_name}>
+          {icon && <span>{icon}</span>}
+          {text && <span>{text}</span>}
+        </button>
+      </Link>
     </>
   );
 };

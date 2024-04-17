@@ -6,6 +6,7 @@
   --paleta-3: #7b44f2;
   --paleta-4: #32088c;
   --paleta-5: #550cf2;
+  --paleta-6: #757575;
 }
 
 * {
@@ -14,65 +15,105 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: var(--fonte);
+  outline: none;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--paleta-2);
 }
 
-header nav {
+header {
   background-color: var(--paleta-4);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 3vh 1vw;
 }
 
-header nav a {
+button,
+input {
+  font-weight: bold;
+  font-size: 1.5vw;
+  border: none;
+  background-color: transparent;
+}
+
+#user-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6vw;
+}
+
+#logo,
+#logo span,
+#logo span svg {
+  align-items: center;
   display: flex;
   color: var(--paleta-2);
-  font-size: 3vw;
-  flex-wrap: nowrap;
-  gap: 1vw;
+  font-weight: 300;
+  font-size: 2.5vw;
 }
 
-header nav input {
-  width: 40vw;
-  height: 5vh;
-  padding: 1vw;
+#logo:hover {
+  opacity: 0.8;
+  transition: 0.2s;
 }
 
-header nav div {
+#search-bar {
   display: flex;
-  gap: 7vw;
+  background-color: var(--paleta-2);
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-radius: 0.5vw;
 }
 
-img {
-  object-fit: contain;
-}
-
-button,
-input{
-  outline: none;
-  border: none;
-  font-size: 1.5vw;
-  font-weight: bold;
-  background-color: transparent;
+#search-bar span {
+  display: flex;
+  background-color: var(--paleta-5);
+  border-radius: 0.5vw;
+  margin: 0.1vw;
+  padding: 1vw;
   cursor: pointer;
 }
 
-header button {
+#search-bar span:hover {
+  background-color: var(--paleta-3);
+  transition: 0.5s;
+}
+
+#search-bar input {
+  color: var(--paleta-6);
+  width: 40vw;
+  height: 5vh;
+  padding: 1vw;
+  outline: none;
+  margin: 0.1vw;
+  border-bottom: 0.2vw solid var(--paleta-2);
+}
+
+#search-bar input:hover {
+  border-bottom: 0.2vw solid var(--paleta-1);
+  transition: 0.5s;
+}
+
+#search-bar svg {
+  font-size: 1.5vw;
   color: var(--paleta-2);
+}
+
+.btn {
   display: flex;
   align-items: center;
+  color: var(--paleta-2);
+  font-weight: bold;
+  font-size: 1.5vw;
 }
 
-header a button span,
-header a button span svg {
-  font-size: 3vw;
+.btn svg {
+  font-size: 2vw;
+}
+
+#user-options {
   display: flex;
-}
-
-header button span svg {
-  font-size: 2.5vw;
+  gap: 2vw;
 }
