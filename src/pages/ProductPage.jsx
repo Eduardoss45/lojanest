@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import ProductsDetails from "../components/ProductsDetails";
+import LazyLoad from "react-lazyload";
 
 const productsURL = import.meta.env.VITE_API;
 
@@ -53,7 +54,9 @@ const ProductPage = () => {
         {product &&
           product.images.map((img, index) => (
             <div key={index} id={index} onClick={() => handleImageClick(img)}>
-              <img className="product-image" src={img} alt={product.title} />
+              <LazyLoad height={200} offset={100}>
+                <img className="product-image" src={img} alt={product.title} />
+              </LazyLoad>
             </div>
           ))}
       </div>
