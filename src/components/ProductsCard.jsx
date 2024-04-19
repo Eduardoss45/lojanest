@@ -1,28 +1,37 @@
 import React from "react";
-import Button from "./Button";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const ProductsCard = ({
   id,
   title,
   description,
   thumbnail,
-  showLink = true,
+  discountPercentage,
+  price,
 }) => {
   return (
     <>
-      <article className="card" id={`product-${id}`}>
-        <h2 className="card-title">{title}</h2>
-        <section className="card-content">
-          <LazyLoad height={200} offset={100}>
-            <img src={thumbnail} alt={title} className="card-image" />
-          </LazyLoad>
-          <p className="description">{description}</p>
-          <nav className="card-btn">
-            {showLink && <Button rote={`/product/${id}`} text="Saiba mais" />}
-          </nav>
-        </section>
-      </article>
+      <Link to={`/product/${id}`} className="product-link" id={id}>
+        <article className="card">
+          <div className="product-image">
+            <LazyLoad height={200} offset={100}>
+              <img src={thumbnail} alt={title} className="card-image" />
+            </LazyLoad>
+            <span>-{discountPercentage}%</span>
+          </div>
+          <section className="card-content">
+            <div className="card-description">
+              <p className="description">{description}</p>
+            </div>
+            <div>
+              <h3 className="card-details-price">
+                <span>${price}</span>
+              </h3>
+            </div>
+          </section>
+        </article>
+      </Link>
     </>
   );
 };

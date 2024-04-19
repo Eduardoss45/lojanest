@@ -1,26 +1,20 @@
 :root {
   --fonte: "Lato";
-  --degrade: linear-gradient(45deg, #ccc, #e7e7e7, #ccc);
   --paleta-1: #0d0d0d;
   --paleta-2: #f2f2f2;
   --paleta-3: #7b44f2;
   --paleta-4: #32088c;
   --paleta-5: #550cf2;
   --paleta-6: #757575;
+  --paleta-7: #cccccc;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
   font-family: var(--fonte);
   outline: none;
-  overflow-x: hidden;
-}
-
-body {
-  background-color: var(--paleta-2);
 }
 
 header {
@@ -34,6 +28,27 @@ input {
   font-size: 1.5vw;
   border: none;
   background-color: transparent;
+}
+
+main {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1vw;
+  margin: 1vw auto;
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--paleta-1);
 }
 
 #user-navigation {
@@ -116,4 +131,58 @@ input {
 #user-options {
   display: flex;
   gap: 2vw;
+}
+
+.card {
+  position: relative;
+  width: 20vw;
+  height: 25vw;
+  font-size: 1.1vw;
+  background-color: var(--paleta-2);
+  border: 1px solid var(--paleta-7);
+  overflow: hidden;
+}
+
+.card:hover {
+  border: 1px solid var(--paleta-4);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-image span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--paleta-3);
+  color: var(--paleta-2);
+  padding: 0.3em;
+  text-align: center;
+  font-size: 1em;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0.8em;
+}
+
+.card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

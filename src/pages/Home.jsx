@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`${productsURL}?limit=99`);
+        const res = await fetch(`${productsURL}?limit=100`);
         const data = await res.json();
         setProducts(data.products);
         setLoading(false);
@@ -32,6 +32,8 @@ const Home = () => {
           id={product.id}
           title={product.title}
           description={product.description}
+          discountPercentage={product.discountPercentage}
+          price={product.price}
           thumbnail={product.images[0]}
         />
       ))}
